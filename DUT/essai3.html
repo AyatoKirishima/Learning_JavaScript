@@ -1,8 +1,8 @@
 <html>
     <head>
         <title> déclarer et exécuter une fonction javascript</title>
-        <script language=" javascript "
-            type="text/javascript"> nbAffichage = 0; 
+        <script language=" javascript " type="text/javascript"> 
+        nbAffichage = 0; 
             function RepAlerte(n) { 
                 alert("nombre d'afichages:" + n); 
             }
@@ -16,5 +16,7 @@
         <script language=" javascript " type="text/javascript"> nbAffichage += 1; RepAlerte(nbAffichage);</script>
     </body>
 
-    <!-- La variable est locale car lors du rafraichissement de la page, la valeur n'est pas conservée -->
+    <!-- When you use JavaScript, local variables are variables that are defined within functions. 
+        They have local scope, which means that they can only be used within the functions that define them. 
+        Global Variable: In contrast, global variables are variables that are defined outside of functions -->
 </html>
