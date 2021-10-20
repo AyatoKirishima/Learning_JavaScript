@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+</head>
+
+<body>
+    <form action="" method="POST">
+        <h1>Saisie des informations du client</h1>
+        <fieldset>
+            <!-- Civilité -->
+            <label for="Civilité">Civilité :</label>
+            <input type="radio" required name="civ" value="civ" id="Madame">
+            <label for="BAC +1">Madame</label>
+            <input type="radio" required name="civ" value="civ" id="Monsieur">
+            <label for="BAC +1">Monsieur</label>
+
+            <!-- Prénom -->
+            <br><br>
+            <label for="Prénom">Prénom :</label>
+            <input type="text" required name="Prénom" placeholder=" Prénom " />
+
+            <!-- Nom -->
+            <br><br>
+            <label for="Nom">Nom :</label>
+            <input type="text" required name="Nom" placeholder=" Nom " />
+
+            <!-- Mel -->
+            <br><br>
+            <label for="Mel">Mel :</label>
+            <input type="text" required name="Mel" placeholder=" Mel " />
+
+        </fieldset>
+        <br>
+        <fieldset>
+            <label for="Plateformes">Plateformes :</label>
+            <!-- Windows -->
+            <input type="checkbox" value="Windows" name="language[]" id="Windows">
+            <label for="Windows">Windows</label>
+
+            <!-- Mac -->
+            <input type="checkbox" value="Mac" name="language[]" id="Mac">
+            <label for="Mac">Mac</label>
+
+            <!-- Linux -->
+            <input type="checkbox" value="Linux" name="language[]" id="Linux">
+            <label for="Linux">Linux</label>
+        </fieldset>
+        <br>
+        <fieldset>
+             <!-- Applications -->
+             <label for="Applications">Applications :</label>
+        </fieldset>
+    </form>
+</body>
+
+</html>
