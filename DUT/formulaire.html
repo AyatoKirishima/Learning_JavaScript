@@ -6,33 +6,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire</title>
+    <script language="javascript" type="text/javascript">
+        /* function ModifChamp() {
+            if (document.forms["form"].check1.checked)
+                document.forms["form"].text1.value = 'Bouton coché';
+            else document.forms["form"].text1.value = 'bouton non coché';
+         }*/
+
+        function validateForm() {
+            var myForm = document.forms["myForm"]
+            var prenom = myForm.prenom.value;
+            var Nom = myForm.nom.value;
+            var Mel = myForm.mel.value;
+            var madame = myForm.madame;
+            var monsieur = myForm.monsieur;
+            var windows = myForm.Windows;
+            var mac = myForm.Mac;
+            var linux = myForm.Linux;
+            var appli = myForm.Applications.value; //myForm.Applications.value;
+            var message = "";
+
+            if (!(madame.checked) && !(monsieur.checked)) {
+                message += "\n- civilite";
+            }
+
+            if (prenom.trim() == "") {
+                message += "\n- prenom";
+            }
+
+            if (Nom.trim() == "") {
+                message += "\n- nom";
+
+            }
+
+            if (Mel.trim() == "") {
+                message += "\n- mel";
+            }
+
+            if (!(windows.checked) && !(mac.checked) && !(linux.checked)) {
+                message += "\n- plateformes";
+            }
+
+            if (!appli) {
+                message += "\n- application(s)";
+            }
+
+            if (message.length != 0) {
+                alert("Veuillez ajouter : "+message);
+                return false;
+            }
+            else {
+                alert("All datas are valid!");
+                return true;
+            }
+        }
+    </script>
 </head>
 
+<style>
+    input:invalid {
+        box-shadow: 0 0 5px 1px pink;
+    }
+
+    input:valid {
+        box-shadow: 0 0 5px 1px greenyellow;
+    }
+</style>
+
 <body>
-    <form action="" method="POST">
+    <form name="myForm" action="" onsubmit="return valider()" method="GET">
         <h1>Saisie des informations du client</h1>
         <fieldset>
             <!-- Civilité -->
             <label for="Civilité">Civilité :</label>
-            <input type="radio" required name="civ" value="civ" id="Madame">
-            <label for="BAC +1">Madame</label>
-            <input type="radio" required name="civ" value="civ" id="Monsieur">
-            <label for="BAC +1">Monsieur</label>
+            <input type="radio" name="civ" value="civ" id="madame">
+            <label for="">Madame</label>
+            <input type="radio" name="civ" value="civ" id="monsieur">
+            <label for="">Monsieur</label>
 
             <!-- Prénom -->
             <br><br>
-            <label for="Prénom">Prénom :</label>
-            <input type="text" required name="Prénom" placeholder=" Prénom " />
+            <label for="prenom">Prénom :</label>
+            <input type="text" name="prenom" id="prenom" placeholder=" Prénom " />
 
             <!-- Nom -->
             <br><br>
             <label for="Nom">Nom :</label>
-            <input type="text" required name="Nom" placeholder=" Nom " />
+            <input type="text" name="Nom" id="nom" placeholder=" Nom " />
 
             <!-- Mel -->
             <br><br>
             <label for="Mel">Mel :</label>
-            <input type="text" required name="Mel" placeholder=" Mel " />
+            <input type="email" name="Mel" id="mel" placeholder=" Mel " />
 
         </fieldset>
         <br>
@@ -52,8 +117,21 @@
         </fieldset>
         <br>
         <fieldset>
-             <!-- Applications -->
-             <label for="Applications">Applications :</label>
+            <!-- Applications -->
+            <label for="Applications">Applications :</label>
+            <select multiple name="Applications" id="Applications">
+                <!-- <option value="choisir"></option> -->
+                <option value="Bureautique">Bureautique</option>
+                <option value="Dessin">Dessin</option>
+                <option value="Gestion">Gestion</option>
+                <option value="Développement">Développement</option>
+                <option value="SGBD">SGBD</option>
+            </select>
+        </fieldset>
+        <br>
+        <fieldset>
+            <button type="submit" onclick="return validateForm()">Valider</button>
+            <button type="reset">Effacer</button>
         </fieldset>
     </form>
 </body>
