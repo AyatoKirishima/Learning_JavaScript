@@ -102,11 +102,36 @@
       while (numbers.length) {
         const next = selectNextNumber(numbers),
           index = numbers.indexOf(next);
-        // Remove the number so it can't be selected again
+        // Retirer le nombre pour ne pas le sélectionner à nouveau
         numbers.splice(index, 1);
         // Fournir les numéros suivants et ceux qui sont actuellement disponibles.
         // Besoin des numéros pour pouvoir revenir en arrière si nous rencontre d'un doublon
         yield { next, remaining: [...numbers] };
+      }
+
+      // Moyen de vérifier qu'une ligne <> doublon
+      // --> trier chaque ligne
+      // --> correspondance au niveau de l'index indiqué
+      // --> si doublon alors ligne invalide.
+      function isLineValid(currentLines, line) {
+        const sorted = [...line].sort();
+        const foundIndex = currentLines.findIndex(
+          currentLine => {
+            if (currentLine.length !== sorted.length) {
+              // How did we get a mismatch length?
+              return false;
+            }
+            const currentLineSorted = [...currentLine].sort();
+            // Trouver la première incohérence
+            const mismatchIndex = sorted.findIndex(
+              (value, index) => currentLineSorted[index] !== value
+            );
+            // Si aucun n'est incompatible
+            return mismatchIndex === -1;
+          }
+        );
+        // Si rien ne correspond
+        return foundIndex === -1;
       }
     }
   </script>
