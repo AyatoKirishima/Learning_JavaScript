@@ -42,4 +42,3 @@ numberOfCats /= 3;  // numberOfCats vaut maintenant 12/3 = 4;
 // Constantes
 const nombrePostParPage = 20;
 nombrePostParPage = 30; // Retournera une erreur dans la console car on ne peut plus changer sa valeur
-
