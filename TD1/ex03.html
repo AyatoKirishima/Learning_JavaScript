@@ -51,10 +51,11 @@
   <hr />
   <a id="searchbar" href="https://www.google.com/" target="_blank" onclick="letsSearch()">Lien vers
     Google</a>
+    <!-- onclick à éviter -->
   <script>
     "use strict"
 
-    function letsSearch() {
+    function letsSearch(event) {
       let url = prompt("What do you want to search ?")
       if (confirm("Are you sure you want to search " + url + '?')) {
         setTimeout(function () {
@@ -63,6 +64,7 @@
       }
       alert("You'll be redirected in 5s");
       event.preventDefault();
+      // à la place du onclick utiliser un selector : document.querySelector("a").addEventListener("click", letsSearch);
     };
 
   </script>
