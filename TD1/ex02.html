@@ -10,6 +10,10 @@
 </head>
 
 <body>
+  <p id="algo">
+
+  </p>
+
   <h1>Exercice 02 - Tableaux et boucles</h1>
   <p>
     Dans cet exercice, nous allons réaliser notre première boucle en
@@ -18,7 +22,7 @@
   <blockquote>
     > Le "FizzBuzz" est un algorithme simple dont le but est d'imprimer les
     chiffres allant de 1 à n. Si le chiffre est divisible par 3, on imprime
-    "Fizz" ; si'l est divisible par 5, on imprime "Buzz" ; s'il est divisible
+    "Fizz" ; s'il est divisible par 5, on imprime "Buzz" ; s'il est divisible
     par les deux, on imprime "FizzBuzz".<br />
     En pratique, l'algorithme devra imprimer cette séquence :
     <code>1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14,
@@ -37,6 +41,33 @@
     dans un tableau dans une seule variable. Loggez ce résultat dans la
     console.
   </blockquote>
+  <script>
+    "use strict"
+    let table = [];
+    let N;
+
+    do {
+      N = parseInt(prompt("Please enter a max number for the table : "));
+    } while (isNaN(N));
+
+    // Création d'un tableau d'entiers de 1 à N
+    for (let i = 1; i <= N; i++) {
+      if ((i % 5 == 0) && (i % 3 == 0)) {
+        table.push("FizzBuzz");
+      } else if (i % 3 == 0) {
+        table.push("Fizz");
+      } else if (i % 5 == 0) {
+        table.push("Buzz");
+      } else {
+        table.push(i);
+      }
+    }
+    // Affichage du tableau dans la console
+    console.log(table);
+
+    // Affichage du tableau dans l'html
+    // document.getElementById("algo").innerHTML = table;
+  </script>
 </body>
 
 </html>
