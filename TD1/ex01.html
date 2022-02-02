@@ -14,26 +14,43 @@
     "use strict"
     function comparison() {
       // Attention : si pas de parseInt : comparaison entre deux strings (docn résultat biz)
-      let num1 = parseInt(prompt("Please enter a first number"));
-      console.log(num1);
-      let num2 = parseInt(prompt("Please enter a 2nd number"));
-      console.log(num2);
+      let num1;
+      let num2;
+      do {
+        num1 = parseInt(prompt("Please enter a first number"));
+      } while (isNaN(num1));
+      do {
+        num2 = parseInt(prompt("Please enter a 2nd number"));
+      } while (isNaN(num2));
 
-      // Vérifs
-      if (typeof num1 === 'number' && (num1 % 1) === 0) {
-        if (typeof num2 === 'number' && (num2 % 1) === 0) {
-          // data is an integer
-          if (num1 > num2) {
-            console.log("The highest number is : ", num1);
-          } else {
-            console.log("The highest number is : ", num2);
-          }
-        } else {
-          console.log("Error, please put an integer (num2)")
-        }
+      if (num1 > num2) {
+        console.log("The highest number is : ", num1);
       } else {
-        console.log("Error,  please put an integer (num1)")
+        console.log("The highest number is : ", num2);
       }
+
+      // Autre solution, pas opti mais ok
+
+      // let num1 = parseInt(prompt("Please enter a first number"));
+      // console.log(num1);
+      // let num2 = parseInt(prompt("Please enter a 2nd number"));
+      // console.log(num2);
+
+      // // Vérifs
+      // if (typeof num1 === 'number' && (num1 % 1) === 0) {
+      //   if (typeof num2 === 'number' && (num2 % 1) === 0) {
+      //     // data is an integer
+      //     if (num1 > num2) {
+      //       console.log("The highest number is : ", num1);
+      //     } else {
+      //       console.log("The highest number is : ", num2);
+      //     }
+      //   } else {
+      //     console.log("Error, please put an integer (num2)")
+      //   }
+      // } else {
+      //   console.log("Error,  please put an integer (num1)")
+      // }
     }
 
     comparison();
