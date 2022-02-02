@@ -49,7 +49,23 @@
     </ul>
   </blockquote>
   <hr />
-  <a href="https://www.google.com/" target="_blank">Lien vers Google</a>
+  <a id="searchbar" href="https://www.google.com/" target="_blank" onclick="letsSearch()">Lien vers
+    Google</a>
+  <script>
+    "use strict"
+
+    function letsSearch() {
+      let url = prompt("What do you want to search ?")
+      if (confirm("Are you sure you want to search " + url + '?')) {
+        setTimeout(function () {
+          window.location.replace("https://www.google.com/search?q=" + url);
+        }, 5000);
+      }
+      alert("You'll be redirected in 5s");
+      event.preventDefault();
+    };
+
+  </script>
 </body>
 
 </html>
