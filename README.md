@@ -3,3 +3,7 @@
 ```
 https://www.javascripttutorial.net
 ```
+
+```
+https://javascript.info/
+```
