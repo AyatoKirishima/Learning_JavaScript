@@ -9,7 +9,6 @@ window.addEventListener('load', () => {
     eevee.style.top = 0;
 });
 
-
 window.addEventListener('keydown', (e) => {
     switch (e.key) {
         case 'ArrowLeft':
@@ -26,5 +25,5 @@ window.addEventListener('keydown', (e) => {
             break;
     }
     // Empêcher le keydown sur la fenêtre
-    e.preventDefault(); 
+    e.preventDefault();
 });
