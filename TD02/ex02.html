@@ -39,7 +39,17 @@
     <hr />
     <dl>
       <dr>Réponse à la première question</dr>
-      <dd>-- Ecrivez votre réponse ici --</dd>
+      <dd>
+        <em>
+          - On remarque que lorsque l'on clique sur le main, seulement "09:23:56.337 - Click event caught on MAIN" apparait dans la console
+          <br>
+          - Cependant, lorsque l'on clique sur la div, cela prends en compte le clic sur la div ET sur le main.
+          <br>
+          - Mais lors du clic sur le bouton, cela prends en compte le clic sur le bouton, la div puis le main
+          <br>
+          <b>-- Lors du clic sur le bouton (ou la div) on observe un event bubbling --</b>
+        </em>
+      </dd>
     </dl>
     <hr />
     <script src="console-handler.js"></script>
