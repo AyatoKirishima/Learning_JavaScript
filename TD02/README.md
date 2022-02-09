@@ -1,0 +1,3 @@
+- [Bootstrap JS Carousel](https://www.w3schools.com/bootstrap/bootstrap_ref_js_carousel.asp)
+- [Slideshow Gallery](https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp)
+- [Slideshow Gallery Editor](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_gallery)
