@@ -46,5 +46,5 @@ details summary {
   cursor: pointer;
 }
 #gallery .thumbnails .image-container > *.active {
-  border: 3px solid black;
+  border: 3px solid rgb(35, 114, 124);
 }

@@ -62,21 +62,22 @@
     </div>
     <div class="thumbnails">
       <div class="icon">
-        <button>
+        <button class="left" onclick="plusSlides(-1)">
           &lt;
         </button>
       </div>
       <div class="image-container">
-        <img src="ex05-chaton01.jpg" alt="☆*:. o(≧▽≦)o .:*☆" class="active" />
-        <img src="ex05-chaton02.jpg" alt="༼∩•́ω•̀∩༽" />
-        <img src="ex05-chaton03.jpg" alt="(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧" />
-        <img src="ex05-chaton04.jpg" alt="(°ヮ°)" />
-        <img src="ex05-chaton05.jpg" alt="(=^-ω-^=)" />
-        <img src="ex05-chaton06.jpg" alt="ᕙ(˵◕ω◕˵✿)つ" />
-        <img src="ex05-chaton07.jpg" alt="(✿ ◕ᗜ◕)━♫.*･｡ﾟ" />
+        <img class="mySlides active" src="ex05-chaton01.jpg" alt="☆*:. o(≧▽≦)o .:*☆" />
+        <img class="mySlides" onclick="currentSlide(1)" src="ex05-chaton02.jpg" alt="༼∩•́ω•̀∩༽" />
+        <img class="mySlides" onclick="currentSlide(2)" src="ex05-chaton03.jpg" alt="(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧" />
+        <img class="mySlides" onclick="currentSlide(3)" src="ex05-chaton04.jpg" alt="(°ヮ°)" />
+        <img class="mySlides" onclick="currentSlide(5)" src="ex05-chaton05.jpg" alt="(=^-ω-^=)" />
+        <img class="mySlides" onclick="currentSlide(5)" src="ex05-chaton06.jpg" alt="ᕙ(˵◕ω◕˵✿)つ" />
+        <img class="mySlides" onclick="currentSlide(6)" src="ex05-chaton07.jpg" alt="(✿ ◕ᗜ◕)━♫.*･｡ﾟ" />
       </div>
+      
       <div class="icon">
-        <button>
+        <button class="right" onclick="plusSlides(1)">
           &gt;
         </button>
       </div>
