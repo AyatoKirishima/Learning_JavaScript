@@ -68,9 +68,9 @@ const validateForm = () => {
         isValid = false;
     }
 
-    if (numTel.value == "") {
-        document.querySelector("label[for='phone'] span.error-msg").innerHTML = 'Veuillez entrer votre ville';
-        numTel.focus();
+    if (ville.value == "") {
+        document.querySelector("label[for='city'] span.error-msg").innerHTML = 'Veuillez entrer votre ville';
+        ville.focus();
         isValid = false;
     }
 
@@ -84,6 +84,11 @@ const validateForm = () => {
         isValid = false;
     }
     
+    if (mdp.value != mdpConfirm) {
+        document.querySelector("label[for='password-confirm'] span.error-msg").innerHTML = 'Les mdp ne sont pas identiques';
+        mdpConfirm.focus();
+        isValid = false;
+    }
 
     return isValid;
 };
