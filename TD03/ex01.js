@@ -16,13 +16,21 @@ const validateForm = () => {
     let mdpConfirm = document.getElementById("password-confirm");
 
     let isValid = true;
+    // Reset tous les error msg du formulaire    
+    const clear = document.querySelectorAll("span.error-msg");
 
+    for (let index = 0; index < clear.length; index++) {
+        clear[index].innerHTML = "";
+
+    }
+
+    // Check des champs
     if (nom.value == "") {
         document.querySelector("label[for='last-name'] span.error-msg").innerHTML = 'Veuillez entrer votre nom';
         nom.focus();
         isValid = false;
     }
-    
+
     if (prenom.value == "") {
         document.querySelector("label[for='first-name'] span.error-msg").innerHTML = 'Veuillez entrer votre prénom';
         prenom.focus();
@@ -35,12 +43,17 @@ const validateForm = () => {
         isValid = false;
     }
 
-    if (email.value == "") {
-        document.querySelector("label[for='email'] span.error-msg").innerHTML = 'Veuillez entrer votre nom de naissance';
+    if ((email.value == "") && (validateEmail(email.value) == false)) {
+        document.querySelector("label[for='email'] span.error-msg").innerHTML = 'Veuillez entrer votre email';
         email.focus();
         isValid = false;
+    } else if (validateEmail(email.value) == false) {
+        document.querySelector("label[for='email'] span.error-msg").innerHTML = 'Veuillez entrer un email valide';
+        email.focus();
+        isValid = false;
+        console.log("Invalid email");
     }
-   return isValid;
+    return isValid;
 };
 
 form.addEventListener("submit", (event) => {
@@ -48,3 +61,9 @@ form.addEventListener("submit", (event) => {
         event.preventDefault();
     }
 });
+
+function validateEmail(email) {
+    // '\S' = anything but a whitespace character
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
