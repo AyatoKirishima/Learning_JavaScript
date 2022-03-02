@@ -51,8 +51,18 @@ const validateForm = () => {
         document.querySelector("label[for='email'] span.error-msg").innerHTML = 'Veuillez entrer un email valide';
         email.focus();
         isValid = false;
-        console.log("Invalid email");
     }
+
+    if (codePost.value == "") {
+        document.querySelector("label[for='postal-code'] span.error-msg").innerHTML = 'Veuillez entrer votre code postal';
+        codePost.focus();
+        isValid = false;
+    } else if (codePost.value.length != 5){
+        document.querySelector("label[for='postal-code'] span.error-msg").innerHTML = 'Veuillez entrer un code postal valide';
+        codePost.focus();
+        isValid = false;
+    }
+
     return isValid;
 };
 
