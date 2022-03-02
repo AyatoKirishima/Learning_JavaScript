@@ -26,8 +26,8 @@ let myBook = {
     numberOfPages: 250,
     isAvailable: true
 };
-let bookTitle = myBook["title"];  // "L'Histoire de Tao"
-let bookPages = myBook["numberOfPages"];  // 250
+let bookTitle = myBook["title"]; // "L'Histoire de Tao"
+let bookPages = myBook["numberOfPages"]; // 250
 
 // On met entre [] une variable qui contient en string le nom de la propriété que l’on souhaite atteindre
 let myBook = {
@@ -37,7 +37,7 @@ let myBook = {
     isAvailable: true
 };
 let propertyToAccess = "title"
-let bookTitle = myBook[propertyToAccess];  // "L'Histoire de Tao"
+let bookTitle = myBook[propertyToAccess]; // "L'Histoire de Tao"
 
 // Création d'une classe
 class Book {
