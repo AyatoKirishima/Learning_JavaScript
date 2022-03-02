@@ -62,7 +62,7 @@ const validateForm = () => {
         document.querySelector("label[for='postal-code'] span.error-msg").innerHTML = 'Veuillez entrer votre code postal';
         codePost.focus();
         isValid = false;
-    } else if (codePost.value.length != 5){
+    } else if (codePost.value.length != 5) {
         document.querySelector("label[for='postal-code'] span.error-msg").innerHTML = 'Veuillez entrer un code postal valide';
         codePost.focus();
         isValid = false;
@@ -83,7 +83,13 @@ const validateForm = () => {
         numTel.focus();
         isValid = false;
     }
-    
+
+    if (mdp.value == "") {
+        document.querySelector("label[for='password'] span.error-msg").innerHTML = 'Veuillez entrer un mot de passe';
+        mdp.focus();
+        isValid = false;
+    }
+
     if (mdp.value != mdpConfirm) {
         document.querySelector("label[for='password-confirm'] span.error-msg").innerHTML = 'Les mdp ne sont pas identiques';
         mdpConfirm.focus();
