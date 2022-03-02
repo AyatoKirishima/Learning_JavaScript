@@ -12,7 +12,9 @@
 
 <body>
   <h1>Exercice 01 - Premier formulaire dynamique</h1>
+
   <p>C'est l'heure de réaliser notre premier formulaire dynamique!</p>
+
   <blockquote>
     Ci-dessous vous aurez un skelette de formulaire. A vous de l'adapter pour
     remplir le cahier des charges ci-dessous.
@@ -20,7 +22,7 @@
       <summary>Cahier des charges</summary>
       <ul>
         <li>
-          Les champe erronés lors de l'envoi doivent être indiqués dans les
+          Les champs erronés lors de l'envoi doivent être indiqués dans les
           <code>span</code> avec la classe <code>error-msg</code> en
           explicitant la raison à l'utilisateur de pourquoi le champ n'est pas
           bon
@@ -74,9 +76,12 @@
       </ul>
     </details>
   </blockquote>
+  
   <hr />
-  <form method="get" action="ex01-submit.html">
+
+  <form id="form" method="get" action="ex01-submit.html">
     <h2>Formulaire d'inscription</h2>
+
     <label>Sexe*
       <label for="male">
         <input type="radio" id="male" name="gender" value="male" />Homme</label>
@@ -88,6 +93,7 @@
         <input type="radio" id="other" name="gender" value="other" />Autre</label>
       <span class="error-msg"></span>
     </label>
+
     <label for="civil-status">
       Etat civil*<select id="civil-status" name="civil-status">
         <option value="single">Célibataire</option>
@@ -97,26 +103,32 @@
       </select>
       <span class="error-msg"></span>
     </label>
+
     <label for="last-name">
       Nom*<input type="text" id="last-name" name="last-name" />
       <span class="error-msg"></span>
     </label>
+
     <label for="first-name">
       Prénom*<input type="text" id="first-name" name="first-name" />
       <span class="error-msg"></span>
     </label>
+
     <label for="maiden-name">
       Nom de naissance*<input type="text" id="maiden-name" name="maiden-name" />
       <span class="error-msg"></span>
     </label>
+
     <label for="email">
       Adresse E-Mail*<input type="text" id="email" name="email" />
       <span class="error-msg"></span>
     </label>
+
     <label for="birth-date">
       Date de naissance*<input type="date" name="birth-date" id="birth-date" />
       <span class="error-msg"></span>
     </label>
+
     <label for="parent-email">
       <small>
         Vous avez moins de 13 ans. Merci de spécifier l'adresse mail de votre
@@ -126,35 +138,43 @@
       <input type="text" id="parent-email" name="parent-email" />
       <span class="error-msg"></span>
     </label>
+
     <label for="address">
       Adresse*<input type="text" id="address" name="address" />
       <span class="error-msg"></span>
     </label>
+
     <label for="postal-code">
       Code Postal*<input type="text" id="postal-code" name="postal-code" />
       <span class="error-msg"></span>
     </label>
+
     <label for="city">
       Ville*<input type="text" id="city" name="city" />
       <span class="error-msg"></span>
     </label>
+
     <label for="phone">
       Numéro de téléphone*<input type="text" id="phone" name="phone" />
       <span class="error-msg"></span>
     </label>
+
     <label for="password">
       Mot de passe*<input type="password" id="password" name="password" />
       <span class="error-msg"></span>
     </label>
+
     <label for="password-confirm">
       Confirmez votre mot de passe*<input type="password" id="password-confirm" name="password-confirm" />
       <span class="error-msg"></span>
     </label>
+
     <label for="comments">
       Comment avez-vous connu notre application ?
       <textarea id="comments" name="comments"> </textarea>
       <span class="error-msg"></span>
     </label>
+
     <label for="terms-accept">
       Vous acceptez les
       <a href="#" onclick="alert('Rien à voir ici!');event.preventDefault()">
@@ -162,7 +182,9 @@
       <input type="checkbox" id="terms-accept" name="terms-accept" />
       <span class="error-msg"></span>
     </label>
+
     <button type="submit">Envoyer</button>
+
     <script src="ex01.js"></script>
   </form>
 </body>
