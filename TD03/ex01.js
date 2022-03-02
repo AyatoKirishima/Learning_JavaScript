@@ -84,8 +84,7 @@ const validateForm = () => {
         isValid = false;
     }
 
-    if (mdp.value == "") {
-        document.querySelector("label[for='password'] span.error-msg").innerHTML = 'Veuillez entrer un mot de passe';
+    if (validatePassword(mdp.value) == false) {
         mdp.focus();
         isValid = false;
     }
@@ -116,3 +115,22 @@ function validateNumTel(numTel) {
     var isnum = /^\d+$/;
     return isnum.test(numTel);
 } 
+
+function validatePassword(mdp) {
+    let valid = true;
+    let mdpError = "";
+
+    // Vérif longueur
+    if (mdp.length < 8) {
+        mdpError = 'Veuillez entrer un mot de passe de plus de 8 caractères';
+        document.querySelector("label[for='password'] span.error-msg").innerHTML = mdpError;
+        valid = false;
+    }
+    // vérif majuscules
+    if (mdp.match( /[^a-zA-Z\d]/g) == false ) {
+        mdpError += 'Votre mdp doit contenir une majuscule';
+        document.querySelector("label[for='password'] span.error-msg").innerHTML = mdpError;
+        valid = false;
+    }
+    return valid;
+}
