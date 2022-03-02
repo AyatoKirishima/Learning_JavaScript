@@ -21,7 +21,6 @@ const validateForm = () => {
 
     for (let index = 0; index < clear.length; index++) {
         clear[index].innerHTML = "";
-
     }
 
     // Check des champs
@@ -53,6 +52,12 @@ const validateForm = () => {
         isValid = false;
     }
 
+    if (adresse.value == "") {
+        document.querySelector("label[for='address'] span.error-msg").innerHTML = 'Veuillez entrer votre adresse';
+        adresse.focus();
+        isValid = false;
+    }
+
     if (codePost.value == "") {
         document.querySelector("label[for='postal-code'] span.error-msg").innerHTML = 'Veuillez entrer votre code postal';
         codePost.focus();
@@ -62,6 +67,23 @@ const validateForm = () => {
         codePost.focus();
         isValid = false;
     }
+
+    if (numTel.value == "") {
+        document.querySelector("label[for='phone'] span.error-msg").innerHTML = 'Veuillez entrer votre ville';
+        numTel.focus();
+        isValid = false;
+    }
+
+    if ((numTel.value == "") && (validateNumTel(numTel.value) == false)) {
+        document.querySelector("label[for='phone'] span.error-msg").innerHTML = 'Veuillez entrer votre numéro de téléphone';
+        numTel.focus();
+        isValid = false;
+    } else if (validateNumTel(numTel.value) == false) {
+        document.querySelector("label[for='phone'] span.error-msg").innerHTML = 'Veuillez entrer un numéro de téléphone valide';
+        numTel.focus();
+        isValid = false;
+    }
+    
 
     return isValid;
 };
@@ -77,3 +99,9 @@ function validateEmail(email) {
     var re = /\S+@\S+\.\S+/;
     return re.test(email);
 }
+
+function validateNumTel(numTel) {
+    // global search for non-digit characters
+    var isnum = /^\d+$/;
+    return isnum.test(numTel);
+} 
