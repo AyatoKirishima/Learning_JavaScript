@@ -1,5 +1,4 @@
 "use strict"
-let src = "ex01.js";
 let element = document.querySelector("button");
 // console.log(element);
 element.addEventListener('click', getCatFact);
