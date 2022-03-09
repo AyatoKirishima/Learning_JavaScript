@@ -32,9 +32,9 @@ fetch("https://geo.api.gouv.fr/regions").then(response => {
 })
 
 // Lors d'un changement de région, on réexécute la fonction departement
-let element = document.getElementById("region");
+let region = document.getElementById("region");
 // console.log(element);
-element.addEventListener('change', departement);
+region.addEventListener('change', departement);
 
 // Affichage des départements dans le select
 function departement() {
@@ -49,6 +49,42 @@ function departement() {
         result.forEach(element => {
             // get reference to select element
             let sel = document.getElementById('departement');
+
+            // create new option element
+            let opt = document.createElement('option');
+
+            // create text node to add to option element (opt)
+            opt.appendChild(document.createTextNode(result[i].nom));
+
+            // set value property of opt
+            opt.value = result[i].code;
+
+            // add opt to end of select box (sel)
+            sel.appendChild(opt);
+
+            i++;
+        });
+        console.log(result);
+    })
+}
+
+// Lors d'un changement de région, on réexécute la fonction departement
+let element = document.getElementById("departement");
+// console.log(element);
+element.addEventListener('change', commune);
+
+function commune() {
+    // Vider le select
+    $("#commune").empty();
+    // Récupération du code région : document.getElementById("region").value
+    fetch("https://geo.api.gouv.fr/departements/" + document.getElementById("departement").value + "/communes").then(response => {
+        console.log(response)
+        return response.json();
+    }).then(result => {
+        let i = 0;
+        result.forEach(element => {
+            // get reference to select element
+            let sel = document.getElementById('commune');
 
             // create new option element
             let opt = document.createElement('option');
