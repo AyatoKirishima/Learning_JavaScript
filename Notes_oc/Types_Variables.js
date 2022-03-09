@@ -15,4 +15,4 @@ let wholeName = firstName + " " + lastName;  // valeur: "Will Alexander"
 
 const myName = `Alexander`;
 const salutation = `Bienvenue sur mon site ${myName}!`;
-console.log(salutation);   //retournera “Bienvenue sur mon site Alexander!” 
+console.log(salutation); //retournera “Bienvenue sur mon site Alexander!” 
