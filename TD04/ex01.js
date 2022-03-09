@@ -1,5 +1,5 @@
 "use strict"
-
+let src = "ex01.js";
 let element = document.querySelector("button");
 // console.log(element);
 element.addEventListener('click', getCatFact);
@@ -7,6 +7,7 @@ element.addEventListener('click', getCatFact);
 
 function getCatFact() {
     fetch("https://meowfacts.herokuapp.com").then(response => {
+        console.log(response)
         return response.json();
     }).then(result => {
         console.log(result.data);
