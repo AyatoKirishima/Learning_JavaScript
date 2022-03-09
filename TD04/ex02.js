@@ -46,9 +46,20 @@ function departement() {
         return response.json();
     }).then(result => {
         let i = 0;
+
+        // get reference to select element
+        let sel = document.getElementById('departement');
+
+        // create new option element
+        let opt = document.createElement('option');
+
+        // create text node to add to option element (opt)
+        opt.appendChild(document.createTextNode(""));
+
+        // add opt to end of select box (sel)
+        sel.appendChild(opt);
+
         result.forEach(element => {
-            // get reference to select element
-            let sel = document.getElementById('departement');
 
             // create new option element
             let opt = document.createElement('option');
@@ -82,9 +93,20 @@ function commune() {
         return response.json();
     }).then(result => {
         let i = 0;
+
+        // get reference to select element
+        let sel = document.getElementById('commune');
+
+        // create new option element
+        let opt = document.createElement('option');
+
+        // create text node to add to option element (opt)
+        opt.appendChild(document.createTextNode(""));
+
+        // add opt to end of select box (sel)
+        sel.appendChild(opt);
+
         result.forEach(element => {
-            // get reference to select element
-            let sel = document.getElementById('commune');
 
             // create new option element
             let opt = document.createElement('option');
