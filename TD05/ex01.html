@@ -1,99 +1,101 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="sakura.css" type="text/css" />
-    <link rel="stylesheet" href="td05.css" type="text/css" />
-    <title>Ex01</title>
-  </head>
-  <body>
-    <h1>Exercice 01 - Templates Litterals</h1>
-    <p>
-      Essayez de réaliser les exercices suivants en utilisant les template
-      littérals. N'utilisez pas la concaténation de strings classique.
-    </p>
-    <blockquote>
-      > Cette page inclus un script <code>ex01.js</code> qui liste plusieurs
-      fonctions que vous devrez implémenter. Lorsqu'elles seront correctement
-      implémentées, tous les tests ci-dessous devraient passer au vert
-    </blockquote>
-    <hr />
-    <div class="sub-exercices">
-      <div class="warning">
-        Si vous voyez ce message, c'est probablement car un script s'est mal
-        chargé :( Veuillez vérifier la console pour checker les éventuelles
-        erreurs.
-      </div>
-      <dl id="a">
-        <dt>
-          <span class="icon">🕒</span><span class="text">Fonction A</span>
-        </dt>
-        <dd>
-          <details>
-            <summary>Détails de l'exercice</summary>
-            <p>
-              Modifiez la fonction <code>exA</code> afin qu'elle retourne un
-              string correspondant au nom complet, basé sur les arguments
-              <code>firstName</code> et <code>lastName</code> passés à la
-              fonction
-            </p>
-            <p>
-              Exemple de retour:<br />
-              <code>("Jean-Baptiste", "Leduc") => "Jean-Baptiste Leduc"</code>
-            </p>
-          </details>
-        </dd>
-      </dl>
-      <dl id="b">
-        <dt>
-          <span class="icon">🕒</span><span class="text">Fonction B</span>
-        </dt>
-        <dd>
-          <details>
-            <summary>Détails de l'exercice</summary>
-            <p>
-              Modifiez la fonction <code>exB</code> afin qu'elle retourne un
-              string en fonction de si son paramètre <code>num</code> est pair
-              ou impair.
-            </p>
-            <p>
-              Exemples de retour:<br />
-              <code>(42) => "The number 42 is even"</code><br />
-              <code>(73) => "The number 73 is odd"</code>
-            </p>
-          </details>
-        </dd>
-      </dl>
-      <dl id="c">
-        <dt>
-          <span class="icon">🕒</span><span class="text">Fonction C</span>
-        </dt>
-        <dd>
-          <details>
-            <summary>Détails de l'exercice</summary>
-            <p>
-              Modifiez la fonction <code>exC</code>. Cette fonction accepte deux
-              arguments, "name" et "noCredits". La fonction doit retourner la
-              phrase "Hello 'name', you have 'noCredits' credit(s) in your
-              account". Attention, si le nombre de crédits vaut "1", il ne faut
-              pas imprimer un "s" sur "credits"
-            </p>
-            <p>
-              Exemples de retour:<br />
-              <code>
-                ("John", 42) => "Hello John, you have 42 credits in your account </code
-              ><br />
-              <code>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="sakura.css" type="text/css" />
+  <link rel="stylesheet" href="td05.css" type="text/css" />
+  <title>Ex01</title>
+</head>
+
+<body>
+  <h1>Exercice 01 - Templates Litterals</h1>
+  <p>
+    Essayez de réaliser les exercices suivants en utilisant les template
+    littérals. N'utilisez pas la concaténation de strings classique.
+  </p>
+  <blockquote>
+    > Cette page inclus un script <code>ex01.js</code> qui liste plusieurs
+    fonctions que vous devrez implémenter. Lorsqu'elles seront correctement
+    implémentées, tous les tests ci-dessous devraient passer au vert
+  </blockquote>
+  <hr />
+  <div class="sub-exercices">
+    <div class="warning">
+      Si vous voyez ce message, c'est probablement car un script s'est mal
+      chargé :( Veuillez vérifier la console pour checker les éventuelles
+      erreurs.
+    </div>
+    <dl id="a">
+      <dt>
+        <span class="icon">🕒</span><span class="text">Fonction A</span>
+      </dt>
+      <dd>
+        <details>
+          <summary>Détails de l'exercice</summary>
+          <p>
+            Modifiez la fonction <code>exA</code> afin qu'elle retourne un
+            string correspondant au nom complet, basé sur les arguments
+            <code>firstName</code> et <code>lastName</code> passés à la
+            fonction
+          </p>
+          <p>
+            Exemple de retour:<br />
+            <code>("Jean-Baptiste", "Leduc") => "Jean-Baptiste Leduc"</code>
+          </p>
+        </details>
+      </dd>
+    </dl>
+    <dl id="b">
+      <dt>
+        <span class="icon">🕒</span><span class="text">Fonction B</span>
+      </dt>
+      <dd>
+        <details>
+          <summary>Détails de l'exercice</summary>
+          <p>
+            Modifiez la fonction <code>exB</code> afin qu'elle retourne un
+            string en fonction de si son paramètre <code>num</code> est pair
+            ou impair.
+          </p>
+          <p>
+            Exemples de retour:<br />
+            <code>(42) => "The number 42 is even"</code><br />
+            <code>(73) => "The number 73 is odd"</code>
+          </p>
+        </details>
+      </dd>
+    </dl>
+    <dl id="c">
+      <dt>
+        <span class="icon">🕒</span><span class="text">Fonction C</span>
+      </dt>
+      <dd>
+        <details>
+          <summary>Détails de l'exercice</summary>
+          <p>
+            Modifiez la fonction <code>exC</code>. Cette fonction accepte deux
+            arguments, "name" et "noCredits". La fonction doit retourner la
+            phrase "Hello 'name', you have 'noCredits' credit(s) in your
+            account". Attention, si le nombre de crédits vaut "1", il ne faut
+            pas imprimer un "s" sur "credits"
+          </p>
+          <p>
+            Exemples de retour:<br />
+            <code>
+                ("John", 42) => "Hello John, you have 42 credits in your account </code><br />
+            <code>
                 ("Loïc", 1) => "Hello Loïc, you have 1 credit in your account
               </code>
-            </p>
-          </details>
-        </dd>
-      </dl>
-    </div>
-    <script src="ex01.js"></script>
-    <script src="ex01_check.js"></script>
-  </body>
+          </p>
+        </details>
+      </dd>
+    </dl>
+  </div>
+  <script src="ex01.js"></script>
+  <script src="ex01_check.js"></script>
+</body>
+
 </html>
