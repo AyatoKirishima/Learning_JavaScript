@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sakura.css" type="text/css" />
+    <link rel="stylesheet" href="ex07.css" type="text/css" />
+    <title>Ex07</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Exercice 07 - Le carousel... Mais en jQuery! (avancé et optionnel!)</h1>
+    <p>Pour ceux qui sont en avance, du jQuery mais en plus poussé...</p>
+    <blockquote>
+      > On reprend le même exercice 5 du TD2 avec le carousel. Sauf que cette
+      fois, on supprime toutes les APIs natives (les querySelectors, les
+      getElementById, les addEventListener...), et on gère toute notre couche
+      d'interraction avec des sélecteurs et des fonctions jQuery à la place.
+      Vous pouvez vous baser sur ce que vous avez déjà fait pour cet exercice
+      précédemment (vu que la logique reste très similaire, c'est l'outillage
+      qui est différent)
+    </blockquote>
+    <hr />
+    <div class="full-screen-container"></div>
+    <div id="gallery">
+      <div class="main-picture-container">
+        <img src="ex07-chaton01.jpg" alt="☆*:. o(≧▽≦)o .:*☆" />
+        <p class="description">☆*:. o(≧▽≦)o .:*☆</p>
+      </div>
+      <div class="thumbnails">
+        <div class="icon"><button id="back-btn">&lt;</button></div>
+        <div class="image-container">
+          <img src="ex07-chaton01.jpg" alt="☆*:. o(≧▽≦)o .:*☆" class="active" />
+          <img src="ex07-chaton02.jpg" alt="༼∩•́ω•̀∩༽" />
+          <img src="ex07-chaton03.jpg" alt="(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧" />
+          <img src="ex07-chaton04.jpg" alt="(°ヮ°)" />
+          <img src="ex07-chaton05.jpg" alt="(=^-ω-^=)" />
+          <img src="ex07-chaton06.jpg" alt="ᕙ(˵◕ω◕˵✿)つ" />
+          <img src="ex07-chaton07.jpg" alt="(✿ ◕ᗜ◕)━♫.*･｡ﾟ" />
+        </div>
+        <div class="icon"><button id="next-btn">&gt;</button></div>
+      </div>
+    </div>
+  </body>
+</html>

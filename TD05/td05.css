@@ -1,0 +1,29 @@
+.sub-exercices .warning {
+  background-color: #f44336;
+  color: #ffffff;
+  padding: 8px;
+}
+
+.sub-exercices dl {
+  border: 1px solid #d6d6d6;
+  padding: 8px;
+  border-radius: 3px;
+}
+
+.sub-exercices dl dt {
+  color: #ffffff;
+  background-color: #03a9f4;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 4px 16px;
+  border-radius: 3px;
+}
+
+.sub-exercices summary {
+  cursor: pointer;
+}
+
+.sub-exercices details code {
+  word-break: break-word;
+}
