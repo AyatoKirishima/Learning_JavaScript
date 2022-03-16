@@ -1,5 +1,8 @@
 function exA() {
-  // Implémentez votre solution ici au sous-exercice A
+  MOCK_DATA.map(MOCK_DATA => {
+    MOCK_DATA.id;
+    return MOCK_DATA
+  })
   return MOCK_DATA;
 }
 
