@@ -1,12 +1,4 @@
-function login() {
-  var element = document.getElementById("login-modal");
-  element.style.display = null;
-}
-
-function closeLogin() {
-  var element = document.getElementById("login-modal");
-  element.style.display = "none";
-}
+"use strict"
 
 const LOCATIONS = [
   { longitude: "13.4115", latitude: "52.5235", city: "Berlin" },

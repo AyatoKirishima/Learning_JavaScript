@@ -37,18 +37,18 @@
           <div class="mb-3">
             <label for="email" class="form-label">
               Email address
-              <input type="text" class="form-control" id="email" />
+              <input type="text" class="form-control" id="email" name="email" />
               <small class="error"></small>
             </label>
           </div>
           <div class="mb-3">
             <label for="password" class="form-label">
               Password
-              <input type="password" class="form-control" id="password" />
+              <input type="password" class="form-control" id="password" name="password"/>
               <small class="error"></small>
               <small>Password strength:</small>
               <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 33%; background-color: red">
+                <div class="progress-bar" role="progressbar" id="progress-bar" style="width: 33%; background-color: red">
                   weak
                 </div>
               </div>
@@ -57,13 +57,13 @@
           <div class="mb-3">
             <label for="password-confirm" class="form-label">
               Password Confirm
-              <input type="password" class="form-control" id="password-confirm" />
+              <input type="password" class="form-control" id="password-confirm" name="password-confirm" />
               <small class="error"></small>
             </label>
           </div>
           <div class="mb-3 form-check">
             <label class="form-check-label" for="terms">
-              <input type="checkbox" class="form-check-input" id="terms" />
+              <input type="checkbox" class="form-check-input" id="terms" name="terms" />
               You agree to our
               <a href="#" onclick="alert('Nothing to see here :(')">
                 terms and conditions
@@ -77,6 +77,7 @@
       </div>
     </div>
   </main>
+  <script src="signup.js"></script>
 </body>
 
 </html>
