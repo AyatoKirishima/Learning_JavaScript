@@ -7,50 +7,62 @@
   z-index: 101;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 .custom-modal label {
   width: 100%;
 }
+
 main {
   padding: 32px 0;
 }
+
 main select.form-select {
   width: auto;
 }
+
 .container .row {
   margin-bottom: 16px;
 }
+
 .city-select {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 16px;
 }
+
 .header-block {
   display: flex;
   gap: 16px;
 }
+
 @media screen and (max-width: 991px) {
   .header-block {
     flex-direction: column;
     align-items: center;
   }
+
   .city-select {
     justify-content: center;
   }
 }
-.header-block > img {
+
+.header-block>img {
   height: 180px;
   width: 180px;
 }
+
 .info-block {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   font-size: 20px;
 }
-.info-block > span > span {
+
+.info-block>span>span {
   font-weight: bold;
 }
+
 #hourly-weather {
   display: flex;
   overflow-x: auto;
@@ -58,6 +70,7 @@ main select.form-select {
   gap: 16px;
   padding: 16px 0;
 }
+
 #hourly-weather .hour-block {
   display: flex;
   flex-direction: column;
@@ -67,14 +80,17 @@ main select.form-select {
   border-radius: 3px;
   padding: 16px;
 }
+
 #hourly-weather .hour-block .time {
   font-size: 20px;
   font-weight: 600;
 }
+
 #hourly-weather .hour-block img {
   width: 100px;
   height: 100px;
 }
+
 #hourly-weather .hour-block .hour-temp {
   font-weight: 600;
 }
@@ -86,6 +102,7 @@ main select.form-select {
   gap: 16px;
   padding: 16px 0;
 }
+
 #daily-weather .day-block {
   display: flex;
   flex-direction: column;
@@ -100,6 +117,7 @@ main select.form-select {
   width: 100px;
   height: 100px;
 }
+
 #daily-weather .day-block .day-value {
   font-weight: 600;
 }

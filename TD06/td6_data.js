@@ -1,3 +1,13 @@
+function login() {
+  var element = document.getElementById("login-modal");
+  element.style.display = null;
+}
+
+function closeLogin() {
+  var element = document.getElementById("login-modal");
+  element.style.display = "none";
+}
+
 const LOCATIONS = [
   { longitude: "13.4115", latitude: "52.5235", city: "Berlin" },
   { longitude: "2.3510", latitude: "48.8567", city: "Paris" },

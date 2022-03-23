@@ -1,7 +1,8 @@
-.form-row > .col {
+.form-row>.col {
   display: flex;
   justify-content: center;
 }
+
 form {
   width: 450px;
   margin-top: 32px;
@@ -9,9 +10,11 @@ form {
   border-radius: 3px;
   padding: 32px;
 }
+
 form label {
   width: 100%;
 }
+
 form .error {
   color: #f44336;
 }
