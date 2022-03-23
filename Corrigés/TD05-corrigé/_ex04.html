@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sakura.css" type="text/css" />
+    <title>Ex04</title>
+  </head>
+  <body>
+    <h1>Exercice 04 - Dépendances tierces (jQuery)</h1>
+    <p>
+      jQuery est une librairie qui commence à se fossiliser mais qui reste
+      présente dans beaucoup de codebases. Ca reste une librairie importante
+      dans l'histoire du développement web au point où elle était importée par
+      défaut dans tous les nouveaux projets. Elle a grandement contribué à paver
+      la route pour le JavaScript plus moderne que nous voyons aujourd'hui.
+      Aujourd'hui il est <b>fortement</b> déconseillé d'utiliser jQuery dans un
+      nouveau projet, mais nous allons quand même en faire l'usage de base ici
+      pour vous familiariser vite fait avec son fonctionnement.
+    </p>
+    <blockquote>
+      > Cet exercice est identique à l'exercice 3 du TD01. Le but est de refaire
+      la même fonctionnalité, mais en utilisant des sélecteurs jQuery pour
+      sélectionner nos éléments, et rajouter des events. Vous ne devez donc pas
+      utiliser de querySelectors, des getElementById, et ne pas utiliser des
+      addEventListener entre autres. Renseignez-vous sur la
+      <a href="https://api.jquery.com/" target="_blank">documentation</a> ou des
+      recherches sur internet pour utiliser "correctement"la librairie et ses
+      fonctions.
+    </blockquote>
+    <blockquote>
+      > Sous l'énnoncé de cet exercice, vous trouverez un lien qui redirige en
+      ce moment vers Google. Vous allez rajouter un évènement sur ce lien pour
+      demander à l'utilisateur un terme de recherche. Une fois la saisie
+      effectuée, redirigez l'utilisateur sur le site de Google avec le terme de
+      recherche saisi. Pour cela, redirigez sur l'URL
+      <code
+        >https://www.google.com/search?q={-- insérez le terme de recherche ici
+        --}</code
+      >
+    </blockquote>
+    <blockquote>
+      > Vous constatez probablement que votre redirection fonctionne, mais que
+      votre navigateur ouvre en plus un nouvel onglet sur la page d'accueil de
+      Google. Ceci est dû au fait qu'il y a encore un <code>href</code> sur la
+      balise <code>a</code>. Sans changer le <code>href</code>, trouvez une
+      façon d'empêcher l'évènement de base de l'évènement clic sur le lien afin
+      qu'il n'ouvre pas un lien vers Google dans un nouvel onglet
+    </blockquote>
+    <blockquote>
+      > Adaptez votre code avec le changement suivant: Lorsqu'on clique sur le
+      lien et qu'on saisit notre terme de recherche, on alerte l'utilisateur
+      qu'il sera redirigé après 5 secondes. Effectuez cette redirection après 5
+      secondes.
+    </blockquote>
+    <blockquote>
+      Références complémentaires utiles :
+      <ul>
+        <li>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent"
+            target="_blank"
+            ><code>encoreURIComponent</code></a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.w3schools.com/jsref/event_preventdefault.asp"
+            target="_blank"
+            ><code>preventDefault()</code></a
+          >
+        </li>
+      </ul>
+    </blockquote>
+    <hr />
+    <a href="https://www.google.com/" target="_blank">Lien vers Google</a>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="_ex04.js"></script>
+  </body>
+</html>

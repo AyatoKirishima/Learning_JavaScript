@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sakura.css" type="text/css" />
+    <link rel="stylesheet" href="td05.css" type="text/css" />
+    <title>Ex03</title>
+    <script src="MOCK_DATA.js"></script>
+  </head>
+  <body>
+    <h1>Exercice 03 - Destructuration et spreads d'objets</h1>
+    <p>Appliquons maintenant les concepts de destructuration d'objets</p>
+    <blockquote>
+      > Cette page incorpore un script <code>MOCK_DATA.js</code> qui délare dans
+      le namespace global une variable nommée <code>MOCK_DATA</code>. Vous
+      pouvez regarder son contenu en regardant le fichier importé directement
+      pour vous faire une idée. Ci-dessous vous trouverez une succession de
+      courts énoncés que vous devez résoudre qui consistent tous à manipuler
+      tableau <code>MOCK_DATA</code> afin de parvenir au résultat convoité.
+      Adaptez le script <code>ex03.js</code> déjà inclus dans cette page afin de
+      faire passer tous les tests ci-dessous en vert.
+    </blockquote>
+    <hr />
+    <div class="sub-exercices">
+      <div class="warning">
+        Si vous voyez ce message, c'est probablement car un script s'est mal
+        chargé :( Veuillez vérifier la console pour checker les éventuelles
+        erreurs.
+      </div>
+      <dl id="a">
+        <dt>
+          <span class="icon">🕒</span
+          ><span class="text">A) Retirer des propriétés d'un objet</span>
+        </dt>
+        <dd>
+          <details>
+            <summary>Détails de l'exercice</summary>
+            <p>
+              Modifiez la fonction <code>exA</code> qui va retourner une version
+              altérée d'un utilisateur présent dans <code>MOCK_DATA</code>. La
+              valeur retournée doit être un objet ne contenant que les champs
+              <code>id</code>, <code>first_name</code> et
+              <code>last_name</code>. Utilisez la destructuration d'objet pour
+              parvenir au résultat.
+            </p>
+            <p>
+              Attendu:<br />
+              Un appel de <code>exA(1)</code> retournera la valeur:
+              <code>
+                { id: "43018b5a-be86-4ff7-b1c2-551f9f16e12a", first_name:
+                "Chicky", last_name: "Dibben" }
+              </code>
+            </p>
+          </details>
+        </dd>
+      </dl>
+      <dl id="b">
+        <dt>
+          <span class="icon">🕒</span
+          ><span class="text">B) Ajout de propriété</span>
+        </dt>
+        <dd>
+          <details>
+            <summary>Détails de l'exercice</summary>
+            <p>
+              Modifiez la fonction <code>exB</code> qui va retourner une version
+              altérée d'un utilisateur présent dans <code>MOCK_DATA</code>. La
+              valeur retournée doit contenir une nouvelle clé
+              <code>full_name</code> correspondant à la concaténation de
+              <code>first_name</code> et <code>last_name</code>. Utilisez la
+              destructuration et le spread pour parvenir au résultat.
+            </p>
+            <p>
+              Attendu:<br />
+              Un appel de <code>exA(1)</code> retournera la valeur:
+              <code>
+                { id: "43018b5a-be86-4ff7-b1c2-551f9f16e12a", first_name:
+                "Chicky", last_name: "Dibben", email: "cdibben1@e-recht24.de",
+                gender: "Female", country: "France", age: 95, wallet_amount:
+                "$62", full_name: "Chicky Dibben" }
+              </code>
+            </p>
+          </details>
+        </dd>
+      </dl>
+      <dl id="c">
+        <dt>
+          <span class="icon">🕒</span
+          ><span class="text">C) Destructuration et renommage</span>
+        </dt>
+        <dd>
+          <details>
+            <summary>Détails de l'exercice</summary>
+            <p>
+              Modifiez la fonction <code>exC</code> qui va retourner une version
+              altérée d'un utilisateur présent dans <code>MOCK_DATA</code>. La
+              valeur retournée doit changer toutes les clés de l'objet en snake
+              case en camel case. Vous utiliserez la destructuration et le
+              spread.
+            </p>
+            <p>
+              Attendu:<br />
+              Un appel de <code>exA(1)</code> retournera la valeur:
+              <code>
+                { "firstName":"Chicky", "lastName":"Dibben",
+                "walletAmount":"$62",
+                "id":"43018b5a-be86-4ff7-b1c2-551f9f16e12a",
+                "email":"cdibben1@e-recht24.de", "gender":"Female",
+                "country":"France", "age":95 }
+              </code>
+            </p>
+          </details>
+        </dd>
+      </dl>
+    </div>
+    <script src="_ex03.js"></script>
+    <script src="ex03_check.js"></script>
+  </body>
+</html>

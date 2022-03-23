@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sakura.css" type="text/css" />
+    <link rel="stylesheet" href="td05.css" type="text/css" />
+    <title>Ex02</title>
+    <script src="MOCK_DATA.js"></script>
+  </head>
+  <body>
+    <h1>Exercice 02 - Manipulations de tableaux d'objets</h1>
+    <p>
+      Commençons à manipuler les fonctions avancées de tableaux pour traiter de
+      façon optimisée des datasets lourds sans utiliser de boucles
+      <code>for</code>
+    </p>
+    <blockquote>
+      > Cette page incorpore un script <code>MOCK_DATA.js</code> qui délare dans
+      le namespace global une variable nommée <code>MOCK_DATA</code>. Vous
+      pouvez regarder son contenu en regardant le fichier importé directement
+      pour vous faire une idée. Ci-dessous vous trouverez une succession de
+      courts énoncés que vous devez résoudre qui consistent tous à manipuler
+      tableau <code>MOCK_DATA</code> afin de parvenir au résultat convoité.
+      Adaptez le script <code>ex02.js</code> déjà inclus dans cette page afin de
+      faire passer tous les tests ci-dessous en vert.
+    </blockquote>
+    <hr />
+    <div class="sub-exercices">
+      <div class="warning">
+        Si vous voyez ce message, c'est probablement car un script s'est mal
+        chargé :( Veuillez vérifier la console pour checker les éventuelles
+        erreurs.
+      </div>
+      <dl id="a">
+        <dt>
+          <span class="icon">🕒</span><span class="text">A) Tableau d'IDs</span>
+        </dt>
+        <dd>
+          <details>
+            <summary>Détails de l'exercice</summary>
+            <p>
+              Modifiez la fonction <code>exA</code> qui va retourner une version
+              altérée de <code>MOCK_DATA</code> ne contenant que les IDs des
+              éléments. Utilisez la fonction <code>map</code>.
+            </p>
+            <p>
+              Attendu:
+              <code
+                >["9ac6ef43-ab31-4a9b-9edb-7d4656f09787",
+                "681eab47-85f2-42f7-b87b-a423e99b3f60", ...]</code
+              >
+            </p>
+          </details>
+        </dd>
+      </dl>
+      <dl id="b">
+        <dt>
+          <span class="icon">🕒</span
+          ><span class="text">B) Tableau de noms complets</span>
+        </dt>
+        <dd>
+          <details>
+            <summary>Détails de l'exercice</summary>
+            <p>
+              Modifiez la fonction <code>exB</code> qui va retourner une version
+              altérée de <code>MOCK_DATA</code> contenant les noms complet de
+              chaque entrée du tableau. Concaténez le first_name et le
+              last_name. Utilisez la fonction <code>map</code>.
+            </p>
+            <p>
+              Attendu:
+              <code>["Selig Ratcliff","Chicky Dibben", ...]</code>
+            </p>
+          </details>
+        </dd>
+      </dl>
+      <dl id="c">
+        <dt>
+          <span class="icon">🕒</span><span class="text">C) Filtrages</span>
+        </dt>
+        <dd>
+          <details>
+            <summary>Détails de l'exercice</summary>
+            <p>
+              Modifiez la fonction <code>exC</code> qui va retourner une version
+              altérée de <code>MOCK_DATA</code> contenant uniquement les
+              personnes avec le country "Luxembourg". Utilisez la fonction
+              <code>filter</code>.
+            </p>
+            <p>
+              Attendu:
+              <code
+                >[{"id":"301f94e8-e177-47ae-98d5-05f132ca164b","first_name":"Adelind","last_name":"Haxley","email":"ahaxley4@myspace.com","gender":"Male",<b>"country":"Luxembourg"</b>,"age":52,"wallet_amount":"$2"},{"id":"9d208089-b496-4937-a674-a11ede0a9193","first_name":"Legra","last_name":"Kopfer","email":"lkopferw@google.es","gender":"Female",<b>"country":"Luxembourg"</b>,"age":58,"wallet_amount":"$75"},
+                ...]</code
+              >
+            </p>
+          </details>
+        </dd>
+      </dl>
+      <dl id="d">
+        <dt>
+          <span class="icon">🕒</span
+          ><span class="text">D) Recherche dans tableau d'objet</span>
+        </dt>
+        <dd>
+          <details>
+            <summary>Détails de l'exercice</summary>
+            <p>
+              Modifiez la fonction <code>exD</code> qui va retourner l'objet
+              complet de la personne qui a l'e-mail
+              <code>ahaxley4@myspace.com</code>. Utilisez la fonction
+              <code>find</code>.
+            </p>
+            <p>
+              Attendu:
+              <code
+                >{"id":"301f94e8-e177-47ae-98d5-05f132ca164b","first_name":"Adelind","last_name":"Haxley",<b>"email":"ahaxley4@myspace.com"</b>,"gender":"Male","country":"Luxembourg","age":52,"wallet_amount":"$2"}</code
+              >
+            </p>
+          </details>
+        </dd>
+      </dl>
+      <dl id="e">
+        <dt>
+          <span class="icon">🕒</span><span class="text">E) Accumulateurs</span>
+        </dt>
+        <dd>
+          <details>
+            <summary>Détails de l'exercice</summary>
+            <p>
+              Modifiez la fonction <code>exE</code> qui va calculer le montant
+              total des <code>wallet_amount</code> de tous les utilisateurs et
+              retournez cette valeur. Utilisez la fonction <code>reduce</code>.
+            </p>
+            <p>
+              Attendu:
+              <code>49222</code>
+            </p>
+          </details>
+        </dd>
+      </dl>
+      <dl id="f">
+        <dt>
+          <span class="icon">🕒</span
+          ><span class="text">F) Accumulateurs + Filtres</span>
+        </dt>
+        <dd>
+          <details>
+            <summary>Détails de l'exercice</summary>
+            <p>
+              Modifiez la fonction <code>exF</code> qui va calculer le montant
+              total des <code>wallet_amount</code> de tous les utilisateurs
+              ayant 50 ans ou plus et retournez cette valeur. Utilisez les
+              fonctions <code>filter</code> et <code>reduce</code>.
+            </p>
+            <p>
+              Attendu:
+              <code>29342</code>
+            </p>
+          </details>
+        </dd>
+      </dl>
+    </div>
+    <script src="_ex02.js"></script>
+    <script src="ex02_check.js"></script>
+  </body>
+</html>
