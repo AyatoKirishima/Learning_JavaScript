@@ -37,19 +37,20 @@
           <div class="mb-3">
             <label for="email" class="form-label">
               Email address
-              <input type="text" class="form-control" id="email" />
+              <input type="text" class="form-control" id="email" name="email">
               <small class="error"></small>
             </label>
           </div>
           <div class="mb-3">
             <label for="password" class="form-label">
               Password
-              <input type="password" class="form-control" id="password" />
-              <small class="error"></small>
+              <input type="password" class="form-control" id="password" value="" name="password"
+                onkeyup="isGood(this.value)" />
+              <small class="error" id="missing_elements"></small>
               <small>Password strength:</small>
               <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 33%; background-color: red">
-                  weak
+                <div class="progress-bar help-block" id="password-text" role="progressbar"
+                  style="width: 100%; background-color: white">
                 </div>
               </div>
             </label>
@@ -122,6 +123,7 @@
       </div>
     </div>
   </main>
+  <script src="signup.js"></script>
 </body>
 
 </html>
