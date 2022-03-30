@@ -135,7 +135,11 @@ form.addEventListener("submit", (event) => {
 
 });
 
-// Options
+// ----------------------------------------------------- Options ----------------------------------------------------- //
+// Captchat 
+
+
+
 // Password Strengh verification
 
 // Returns an array of strings with descriptions of the problems
