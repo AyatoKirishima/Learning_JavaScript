@@ -81,11 +81,10 @@ const validateFormItem = (name) => {
                 return false;
             }
             return true;
-        case "captcha":
-            // checkCapchat();
-            const k1 = root.querySelector("input:checked");
-            console.log(k1);
-
+        case "animal":
+            checkCapcha();
+            console.log(checkCapcha());
+        // Rien ne s'affiche
         default:
             console.warn("No check for field", name);
             return true;
@@ -144,11 +143,34 @@ form.addEventListener("submit", (event) => {
 
 // ----------------------------------------------------- Options ----------------------------------------------------- //
 // Captchat 
-
-function checkCapchat() {
-    const k1 = root.querySelector("input:checked");
-    console.log(k1);
+function containsOnly(array1, array2) {
+    return !array2.some(elem => !array1.includes(elem))
 }
+
+function checkCapcha() {
+    // const btn = document.querySelector('#btn');
+    let checkboxes = document.querySelectorAll('input[name="animal"]:checked');
+    let values = [];
+    checkboxes.forEach((checkbox) => {
+        values.push(checkbox.value);
+    });
+    // alert(values);
+    console.log("Values : " + values);
+    let correctValues = ['k1', 'k2', 'k3'];
+    console.log("correctValues : " + correctValues);
+    if ((containsOnly(values, correctValues))) {
+        console.log((containsOnly(values, correctValues)));
+        console.log("capcha ok");
+        alert("Capcha ok !");
+        return (containsOnly(values, correctValues));
+    } else {
+        alert("Capcha pas ok")
+        return false;
+    }
+
+}
+
+
 
 // Password Strengh verification
 

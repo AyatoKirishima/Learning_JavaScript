@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Checkboxes</title>
+</head>
+
+<body>
+    <p>Select your favorite animals:</p>
+    <!-- <label for="c1"> <input type="checkbox" name="animal" value="Cat" id="c1">Cat</label>
+    <label for="c2"><input type="checkbox" name="animal" value="Lotter" id="c2"> Lotter</label>
+    <label for="c3"><input type="checkbox" name="animal" value="Dog" id="c3">Dog</label> -->
+    <div id="captcha" name="captcha">
+        <div>
+            <input type="checkbox" class="kitten" id="k1" value="k1" name="animal" />
+            <label for="k1">
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" class="otter" id="o1" value="o1" name="animal" />
+            <label for="o1">
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" class="kitten" id="k2" value="k2" name="animal" />
+            <label for="k2">
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" class="puppy" id="p1" value="p1" name="animal" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" class="puppy" id="p2" value="p2" name="animal" />
+            <label for="p2">
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" class="kitten" id="k3" value="k3" name="animal" />
+            <label for="k3">
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" class="otter" id="o2" value="o2" name="animal" />
+            <label for="o2">
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" class="otter" id="o3" value="o3" name="animal" />
+            <label for="o3">
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" class="puppy" id="p3" value="p3" name="animal" />
+            <label for="p3">
+            </label>
+        </div>
+    </div>
+    <p>
+        <button id="btn">Get Selected animals</button>
+    </p>
+
+    <script>
+        function containsOnly(array1, array2) {
+            return !array2.some(elem => !array1.includes(elem))
+        }
+
+
+        const btn = document.querySelector('#btn');
+        btn.addEventListener('click', (event) => {
+            let checkboxes = document.querySelectorAll('input[name="animal"]:checked');
+            let values = [];
+            checkboxes.forEach((checkbox) => {
+                values.push(checkbox.value);
+            });
+            // alert(values);
+            console.log("Values : " + values);
+            let correctValues = ['k1', 'k2', 'k3'];
+            console.log("correctValues : " + correctValues);
+            if ((containsOnly(values,correctValues))) {
+                console.log("capcha ok");
+            }
+        });    
+    </script>
+
+</body>
+
+</html>
