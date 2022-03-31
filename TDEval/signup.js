@@ -36,11 +36,11 @@ const validateFormItem = (name) => {
         return true;
     }
     const errorMsg = root.querySelector(".error");
-    console.log(name,errorMsg);
-    if (errorMsg !==  null) {
+    console.log(name, errorMsg);
+    if (errorMsg !== null) {
         errorMsg.innerText = "";
     }
-    
+
     // Do the check
     switch (name) {
         case "email":
@@ -81,6 +81,11 @@ const validateFormItem = (name) => {
                 return false;
             }
             return true;
+        case "captcha":
+            // checkCapchat();
+            const k1 = root.querySelector("input:checked");
+            console.log(k1);
+
         default:
             console.warn("No check for field", name);
             return true;
@@ -135,10 +140,15 @@ form.addEventListener("submit", (event) => {
 
 });
 
+// checkCapchat();
+
 // ----------------------------------------------------- Options ----------------------------------------------------- //
 // Captchat 
 
-
+function checkCapchat() {
+    const k1 = root.querySelector("input:checked");
+    console.log(k1);
+}
 
 // Password Strengh verification
 
