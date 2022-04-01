@@ -130,10 +130,10 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0").then(response => {
 
             fetch("https://pokeapi.co/api/v2/pokemon/" + j + "/").then(response => {
                 return response.json();
-            }).then(result2 => {
+            }).then(result => {
 
                 let typesPoke = document.querySelector("div[id='poke-types']");
-                let max = result2.types.length;
+                let max = result.types.length;
                 console.log("max : " + max);
 
                 // Clear all types (sinon ça se stack à l'infini)
@@ -145,44 +145,44 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0").then(response => {
                 for (i = 0; i < max; i++) {
                     let imgTypesPoke = document.createElement('img');
                     imgTypesPoke.onerror = "this.onerror=null;this.src='assets/poke-icons/0.png';"
-                    imgTypesPoke.src = "assets/poke-types//" + result2.types[i].type.name + ".gif"
+                    imgTypesPoke.src = "assets/poke-types//" + result.types[i].type.name + ".gif"
                     typesPoke.appendChild(imgTypesPoke);
                 }
 
                 let poidsPoke = document.querySelector("span[id='poke-weight']");
                 // console.log(poidsPoke);
-                // console.log(result2.weight);
-                poidsPoke.innerHTML = result2.weight;
+                // console.log(result.weight);
+                poidsPoke.innerHTML = result.weight;
 
                 let taillePoke = document.querySelector("span[id='poke-height']");
-                taillePoke.innerHTML = result2.height;
+                taillePoke.innerHTML = result.height;
 
-                let valeurVitesse = result2.stats[5].base_stat;
+                let valeurVitesse = result.stats[5].base_stat;
                 let vitesse = document.querySelector("li[id = 'poke-speed'] .progress-bar");
                 vitesse.style = "width: " + valeurVitesse + "px";
                 vitesse.innerHTML = valeurVitesse;
 
-                let valeurHp = result2.stats[0].base_stat;
+                let valeurHp = result.stats[0].base_stat;
                 let hp = document.querySelector("div[class='progress-bar']");
                 hp.style = "width: " + valeurHp + "px";
                 hp.innerHTML = valeurHp;
 
-                let valeurAttaque = result2.stats[1].base_stat;
+                let valeurAttaque = result.stats[1].base_stat;
                 let attaque = document.querySelector("li[id = 'poke-attack'] .progress-bar");
                 attaque.style = "width: " + valeurAttaque + "px";
                 attaque.innerHTML = valeurAttaque;
 
-                let valeurDefense = result2.stats[2].base_stat;
+                let valeurDefense = result.stats[2].base_stat;
                 let defense = document.querySelector("li[id = 'poke-defense'] .progress-bar");
                 defense.style = "width: " + valeurDefense + "px";
                 defense.innerHTML = valeurDefense;
 
-                let valeurAttaqueSpe = result2.stats[3].base_stat;
+                let valeurAttaqueSpe = result.stats[3].base_stat;
                 let attaqueSpe = document.querySelector("li[id = 'poke-special-attack'] .progress-bar");
                 attaqueSpe.style = "width: " + valeurAttaqueSpe + "px";
                 attaqueSpe.innerHTML = valeurAttaqueSpe;
 
-                let valeurDefenseSpeciale = result2.stats[4].base_stat;
+                let valeurDefenseSpeciale = result.stats[4].base_stat;
                 let defenseSpeciale = document.querySelector("li[id = 'poke-special-defense'] .progress-bar");
                 defenseSpeciale.style = "width: " + valeurDefenseSpeciale + "px";
                 defenseSpeciale.innerHTML = valeurDefenseSpeciale;
